@@ -6,4 +6,3 @@ dist
 
 # Files
 .env
-serviceAccountKey.json
