@@ -16,6 +16,15 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
       },
+      // Rule untuk memproses file CSS
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',   
+          'postcss-loader', 
+        ],
+      },
     ],
   },
   plugins: [
