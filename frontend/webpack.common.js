@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js'),
+    app: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -24,6 +24,17 @@ module.exports = {
           'css-loader',   
           'postcss-loader', 
         ],
+      },
+      // Rule untuk file JS dan JSX
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
     ],
   },
