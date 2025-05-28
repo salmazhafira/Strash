@@ -1,9 +1,11 @@
-import HomePage from '../pages/home/home-page';
-import AboutPage from '../pages/about/about-page';
+import HomepageView from '../views/HomepageView.jsx';
+import LoginView from '../views/LoginView.jsx';
+import RegisterView from '../views/RegisterView.jsx';
 
 const routes = {
-  '/': new HomePage(),
-  '/about': new AboutPage(),
+  '/': HomepageView,
+  '/login': LoginView,
+  '/register': RegisterView,
 };
 
 export default routes;

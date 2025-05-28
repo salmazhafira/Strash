@@ -13,8 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.27.1",
-    "@babel/preset-env": "^7.27.1",
-    "@babel/preset-react": "^7.24.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
@@ -42,6 +42,7 @@
     "leaflet.markercluster": "^1.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
     "sweetalert2": "^11.21.0",
     "workbox-cacheable-response": "^7.3.0",
     "workbox-precaching": "^7.3.0",

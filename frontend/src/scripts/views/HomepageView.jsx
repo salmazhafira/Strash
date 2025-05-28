@@ -342,7 +342,9 @@ const HomepageView = () => {
             {faqs.map((faq, idx) => (
               <details
                 key={idx}
-                className="group border-b-2 border-primary py-6 w-full"
+                className={`group py-6 w-full ${
+                  idx !== faqs.length - 1 ? "border-b-2 border-primary" : ""
+                }`}
               >
                 <summary className="font-bold text-primary cursor-pointer text-xl flex items-center justify-between break-words">
                   <span className="break-words">{faq.question}</span>

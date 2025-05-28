@@ -6,6 +6,7 @@
     mode: "development",
     devServer: {
       static: path.resolve(__dirname, "dist"),
+      historyApiFallback: true,
       port: 9000,
       hot: true,
       client: {
