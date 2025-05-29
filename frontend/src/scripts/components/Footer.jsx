@@ -4,7 +4,7 @@ import ViewTransitionLink from "./ViewTransitionLink.jsx";
 const footerLinks = [
   [
     { label: "Beranda", href: "/" },
-    { label: "Riwayat", href: "/riwayat" },
+    { label: "Riwayat", href: "/history" },
     { label: "Peringkat", href: "/peringkat" },
     { label: "Lokasi TPA", href: "/lokasi-tpa" },
     { label: "Donasi", href: "/donasi" },

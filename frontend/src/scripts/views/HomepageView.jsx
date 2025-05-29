@@ -310,6 +310,13 @@ const HomepageView = () => {
                 >
                   {feature.cta}
                 </ViewTransitionLink>
+              ) : feature.title === "Riwayat Klasifikasi" ? (
+                <ViewTransitionLink
+                  to="/history"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </ViewTransitionLink>
               ) : (
                 <a
                   href="#"

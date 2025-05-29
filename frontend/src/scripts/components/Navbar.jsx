@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ViewTransitionLink from './ViewTransitionLink.jsx';
 import Swal from 'sweetalert2';
 
@@ -12,7 +12,7 @@ const Navbar = () => {
       html: `
         <div class="flex flex-col gap-4 text-center">
           <a href="/" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/' ? 'font-extrabold' : ''}">Beranda</a>
-          <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Riwayat</a>
+          <a href="/history" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/riwayat' ? 'font-extrabold' : ''}">Riwayat</a>
           <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Peringkat</a>
           <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Lokasi TPA</a>
           <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Donasi</a>
@@ -55,7 +55,16 @@ const Navbar = () => {
             Beranda
           </ViewTransitionLink>
         </li>
-        <li><a href="#" className="transition font-semibold hover:font-extrabold">Riwayat</a></li>
+        <li>
+          <ViewTransitionLink 
+            to="/history" 
+            className={`transition hover:font-extrabold ${
+              location.pathname === '/history' ? 'font-extrabold' : 'font-semibold'
+            }`}
+          >
+            Riwayat
+          </ViewTransitionLink>
+        </li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Peringkat</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Lokasi TPA</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Donasi</a></li>

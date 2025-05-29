@@ -9,7 +9,7 @@ const EducationView = () => {
   return (
     <section className="bg-white min-h-screen pt-20 z-50 font-nunito">
       {/* Hero Section */}
-      <header className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-8 pt-8 px-8 md:pt-16 px-4 md:px-10 lg:px-16">
+      <header className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-8 pt-8 px-8 md:pt-16 px-10 lg:px-16">
         <section className="flex-1 flex flex-col gap-4 w-full md:gap-2">
           <span className="text-xs md:text-sm text-primary font-semibold tracking-widest mb-2">
             EDUKASI Strash
@@ -38,8 +38,8 @@ const EducationView = () => {
             <img
               src={
                 arrowHover
-                  ? '/images/icons/Arrow-Right-Up-4.svg'
-                  : '/images/icons/Arrow-Right-Up-3.svg'
+                  ? '/images/icons/Arrow-Right-2.svg'
+                  : '/images/icons/Arrow-Right.svg'
               }
               alt="Arrow"
               className="w-4 h-4"
