@@ -1,4 +1,7 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import ViewTransitionLink from "../components/ViewTransitionLink.jsx";
 
 const hero = {
   title: "Tingkatkan Pengelolaan Sampah Anda dengan Solusi Cerdas!",
@@ -140,6 +143,19 @@ const team = {
 };
 
 const HomepageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.replace('#', ''));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <main className="pt-28 bg-white font-nunito">
       {/* Hero Section */}
@@ -168,7 +184,7 @@ const HomepageView = () => {
         />
       </section>
       {/* About Section */}
-      <section className="relative py-16 px-8 md:px-10 lg:px-14 overflow-hidden w-full max-w-full">
+      <section id="about" className="relative py-16 px-8 md:px-10 lg:px-14 overflow-hidden w-full max-w-full">
         <div className="w-full px-0 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
           <div className="flex flex-col gap-3 z-10">
             <span className="text-primary font-bold tracking-widest mb-4 text-sm md:text-base">
@@ -220,7 +236,7 @@ const HomepageView = () => {
         </div>
       </section>
       {/* Steps Section */}
-      <section className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full">
+      <section id="steps" className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full">
         <span className="block text-primary font-bold tracking-widest text-center text-sm md:text-base mb-6">
           CARA KERJA
         </span>
@@ -261,7 +277,7 @@ const HomepageView = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full mx-auto">
+      <section id="features" className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full mx-auto">
         <span className="block text-primary font-bold tracking-widest text-center text-sm md:text-base mb-6">
           FITUR
         </span>
@@ -287,18 +303,27 @@ const HomepageView = () => {
               <p className="font-medium text-primary text-base mb-6 max-w-96">
                 {feature.desc}
               </p>
-              <a
-                href="#"
-                className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
-              >
-                {feature.cta}
-              </a>
+              {feature.title === "Edukasi Pemilahan Sampah" ? (
+                <ViewTransitionLink
+                  to="/education"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </ViewTransitionLink>
+              ) : (
+                <a
+                  href="#"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>
       </section>
       {/* Testimonial Section */}
-      <section className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full mx-auto">
+      <section id="testimonials" className="py-16 px-8 md:px-10 lg:px-14 w-full max-w-full mx-auto">
         <span className="block text-primary font-bold tracking-widest text-center text-sm md:text-base mb-6">
           TESTIMONI
         </span>
@@ -343,7 +368,7 @@ const HomepageView = () => {
               <details
                 key={idx}
                 className={`group py-6 w-full ${
-                  idx !== faqs.length - 1 ? "border-b-2 border-primary" : ""
+                  idx !== faqs.length - 1 ? 'border-b-2 border-primary' : ''
                 }`}
               >
                 <summary className="font-bold text-primary cursor-pointer text-xl flex items-center justify-between break-words">
@@ -371,7 +396,7 @@ const HomepageView = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-8 md:px-10 lg:px-14 bg-transparent w-full">
+      <section id="team" className="py-16 px-8 md:px-10 lg:px-14 bg-transparent w-full">
         <div className="bg-white rounded-3xl shadow-lg border px-6 py-8 md:py-12 md:px-16 w-full flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl max-w-sm font-extrabold text-primary mb-4 md:leading-[3.2rem]">

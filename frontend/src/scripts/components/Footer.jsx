@@ -1,20 +1,21 @@
 import React from "react";
+import ViewTransitionLink from "./ViewTransitionLink.jsx";
 
 const footerLinks = [
   [
-    { label: "Beranda", href: "#" },
-    { label: "Riwayat", href: "#" },
-    { label: "Peringkat", href: "#" },
-    { label: "Lokasi TPA", href: "#" },
-    { label: "Donasi", href: "#" },
-    { label: "Akun", href: "#" },
+    { label: "Beranda", href: "/" },
+    { label: "Riwayat", href: "/riwayat" },
+    { label: "Peringkat", href: "/peringkat" },
+    { label: "Lokasi TPA", href: "/lokasi-tpa" },
+    { label: "Donasi", href: "/donasi" },
+    { label: "Akun", href: "/akun" },
   ],
   [
-    { label: "Tentang Kami", href: "#" },
-    { label: "Fitur", href: "#" },
-    { label: "Cara Kerja Strash", href: "#" },
-    { label: "Testimoni", href: "#" },
-    { label: "Hubungi Kami", href: "#" },
+    { label: "Tentang Kami", href: "/#about" },
+    { label: "Fitur", href: "/#features" },
+    { label: "Cara Kerja Strash", href: "/#steps" },
+    { label: "Testimoni", href: "/#testimonials" },
+    { label: "Hubungi Kami", href: "/#team" },
   ],
   [
     { label: "Linkedin", href: "#" },
@@ -51,9 +52,15 @@ const Footer = () => (
           >
             {col.map((link, j) => (
               <li key={j}>
-                <a href={link.href} className="transition font-semibold hover:font-extrabold">
-                  {link.label}
-                </a>
+                {link.href.startsWith("/") || link.href === "#" ? (
+                  <ViewTransitionLink to={link.href} className="transition font-semibold hover:font-extrabold">
+                    {link.label}
+                  </ViewTransitionLink>
+                ) : (
+                  <a href={link.href} className="transition font-semibold hover:font-extrabold" target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

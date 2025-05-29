@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const RegisterView = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -68,7 +68,7 @@ const RegisterView = () => {
               <img src="/images/icons/Password.svg" alt="Password" className="h-5 w-5" />
             </span>
             <input
-              type={showPassword ? "text" : "password"}
+              type={showPassword ? 'text' : 'password'}
               id="password"
               className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition font-bold text-primary text-sm md:text-base placeholder:font-medium text-primary text-base"
               placeholder="***********"
@@ -80,8 +80,8 @@ const RegisterView = () => {
               tabIndex={-1}
             >
               <img
-                src={showPassword ? "/images/icons/Password-Open.svg" : "/images/icons/Password-Hide.svg"}
-                alt={showPassword ? "Tutup Sandi" : "Lihat Sandi"}
+                src={showPassword ? '/images/icons/Password-Open.svg' : '/images/icons/Password-Hide.svg'}
+                alt={showPassword ? 'Tutup Sandi' : 'Lihat Sandi'}
                 className="h-5 w-5"
               />
             </button>
@@ -97,7 +97,7 @@ const RegisterView = () => {
               <img src="/images/icons/Password.svg" alt="Password" className="h-5 w-5" />
             </span>
             <input
-              type={showConfirmPassword ? "text" : "password"}
+              type={showConfirmPassword ? 'text' : 'password'}
               id="confirm-password"
               className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition font-bold text-primary text-sm md:text-base placeholder:font-medium text-primary text-base"
               placeholder="***********"
@@ -109,8 +109,8 @@ const RegisterView = () => {
               tabIndex={-1}
             >
               <img
-                src={showConfirmPassword ? "/images/icons/Password-Open.svg" : "/images/icons/Password-Hide.svg"}
-                alt={showConfirmPassword ? "Tutup Sandi" : "Lihat Sandi"}
+                src={showConfirmPassword ? '/images/icons/Password-Open.svg' : '/images/icons/Password-Hide.svg'}
+                alt={showConfirmPassword ? 'Tutup Sandi' : 'Lihat Sandi'}
                 className="h-5 w-5"
               />
             </button>
@@ -125,7 +125,7 @@ const RegisterView = () => {
             <img src="/images/icons/Enter.svg" alt="Daftar" className="w-5 h-5" />
           </span>
           <span className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-semibold">
-            Daftar 
+            Daftar
           </span>
         </button>
         {/* Divider */}
@@ -136,13 +136,13 @@ const RegisterView = () => {
         </div>
         {/* Social Buttons */}
         <div className="flex flex-col gap-3 md:flex-row md:gap-4 mb-2">
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
             <img src="/images/icons/Google.svg" alt="Google" className="h-4 w-4" />
           </button>
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
             <img src="/images/icons/Facebook.svg" alt="Facebook" className="h-4 w-4" />
           </button>
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
             <img src="/images/icons/iCloud.svg" alt="Apple" className="h-4 w-4" />
           </button>
         </div>
@@ -170,4 +170,4 @@ const RegisterView = () => {
   );
 };
 
-export default RegisterView; 
+export default RegisterView;

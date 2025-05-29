@@ -1,3 +1,3 @@
 const homepageData = {};
 
-export default homepageData; 
+export default homepageData;

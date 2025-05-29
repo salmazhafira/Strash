@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import ViewTransitionLink from './ViewTransitionLink.jsx';
 import Swal from 'sweetalert2';
 
 const Navbar = () => {
@@ -37,36 +38,36 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full flex items-center justify-between px-8 md:px-10 lg:px-14 bg-white fixed top-0 left-0 z-10 font-nunito">
+    <nav className="w-full flex items-center justify-between px-8 md:px-10 lg:px-14 bg-white fixed top-0 left-0 z-50 font-nunito">
       <div className="flex items-center gap-2">
-        <Link to="/">
+        <ViewTransitionLink to="/">
           <img src="/images/logo/Logo.png" alt="Strash Logo" className="h-24 md:h-32 w-auto" />
-        </Link>
+        </ViewTransitionLink>
       </div>
       <ul className="hidden md:flex gap-10 text-primary font-semibold text-base">
         <li>
-          <Link 
+          <ViewTransitionLink 
             to="/" 
             className={`transition hover:font-extrabold ${
               location.pathname === '/' ? 'font-extrabold' : 'font-semibold'
             }`}
           >
             Beranda
-          </Link>
+          </ViewTransitionLink>
         </li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Riwayat</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Peringkat</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Lokasi TPA</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Donasi</a></li>
         <li>
-          <Link 
+          <ViewTransitionLink 
             to="/login" 
             className={`transition hover:font-extrabold ${
               location.pathname === '/login' ? 'font-extrabold' : 'font-semibold'
             }`}
           >
             Masuk
-          </Link>
+          </ViewTransitionLink>
         </li>
       </ul>
       <button className="md:hidden" onClick={handleMenuClick}>

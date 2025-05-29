@@ -1,13 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import routes from '../routes/routes';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
+import routes from "../routes/routes.js";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 const App = () => (
   <Router>
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
+      <ScrollToTop />
       <div className="flex-1">
         <Routes>
           {Object.entries(routes).map(([path, Component]) => (
@@ -21,4 +28,4 @@ const App = () => (
   </Router>
 );
 
-export default App; 
+export default App;
