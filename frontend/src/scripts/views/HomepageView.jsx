@@ -157,7 +157,7 @@ const HomepageView = () => {
   }, [location]);
 
   return (
-    <main className="pt-28 bg-white font-nunito">
+    <section className="pt-28 bg-white font-nunito">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center py-0 px-8 md:py-16 md:px-10 lg:px-14 bg-white max-w-4xl mx-auto gap-4">
         <h1 className="text-4xl md:text-5xl font-semibold text-primary mb-6 leading-[2.8rem] md:leading-[4rem] tracking-wide text-center">
@@ -212,8 +212,8 @@ const HomepageView = () => {
                 </div>
               </div>
             ))}
-            <a
-              href="#"
+            <ViewTransitionLink
+              to="/about"
               className="mt-4 w-max bg-primary text-white text-lg py-2 pl-6 pr-[.5rem] rounded-full font-bold shadow hover:bg-green-800 transition flex items-center gap-2"
             >
               {about.cta}
@@ -224,7 +224,7 @@ const HomepageView = () => {
                   className="h-4 w-4"
                 />
               </span>
-            </a>
+            </ViewTransitionLink>
           </div>
           <div className="hidden md:flex justify-center items-center h-full">
             <img
@@ -281,7 +281,7 @@ const HomepageView = () => {
         <span className="block text-primary font-bold tracking-widest text-center text-sm md:text-base mb-6">
           FITUR
         </span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-14 text-center mx-auto max-w-4xl leading-[2.5rem] md:leading-[3.5rem]">
+        <h2 className="text-3xl mb-8 md:text-4xl font-extrabold text-primary mb-14 text-center mx-auto max-w-4xl leading-[2.5rem] md:leading-[3.5rem]">
           Solusi Pintar Strash untuk Pengelolaan Sampah Berkelanjutan
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -327,7 +327,7 @@ const HomepageView = () => {
         <span className="block text-primary font-bold tracking-widest text-center text-sm md:text-base mb-6">
           TESTIMONI
         </span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-14 text-center">
+        <h2 className="text-3xl mb-8 md:text-4xl font-extrabold text-primary mb-14 text-center">
           Apa Kata Pengguna Tentang Strash?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -423,7 +423,7 @@ const HomepageView = () => {
           </div>
         </div>
       </section>
-    </main>
+    </section>
   );
 };
 

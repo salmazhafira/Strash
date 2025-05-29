@@ -5,26 +5,26 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
-import routes from "../routes/routes.js";
-import ScrollToTop from "./ScrollToTop.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+import routes from "./routes/routes.js";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const App = () => (
   <Router>
-    <div className="min-h-screen flex flex-col bg-white">
+    <main className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <ScrollToTop />
-      <div className="flex-1">
+      <section className="flex-1">
         <Routes>
           {Object.entries(routes).map(([path, Component]) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </div>
+      </section>
       <Footer />
-    </div>
+    </main>
   </Router>
 );
 

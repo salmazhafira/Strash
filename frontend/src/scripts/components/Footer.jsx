@@ -44,7 +44,7 @@ const Footer = () => (
         />
       </div>
       {/* 4 kolom link */}
-      <div className="flex-[3] w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <nav className="flex-[3] w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8" aria-label="Footer Navigation">
         {footerLinks.map((col, i) => (
           <ul
             key={i}
@@ -65,7 +65,7 @@ const Footer = () => (
             ))}
           </ul>
         ))}
-      </div>
+      </nav>
     </div>
     {/* Garis horizontal */}
     <div className="w-full border-t border-primary/40 mt-12" />

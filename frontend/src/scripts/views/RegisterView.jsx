@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const RegisterView = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white font-nunito py-12 px-8 md:py-24 md:px-8">
+    <section className="min-h-screen flex flex-col justify-center items-center bg-white font-nunito py-12 px-4 md:py-24 md:px-8">
       {/* Logo & Heading */}
-      <div className="flex flex-col items-center mt-8 z-50">
+      <header className="flex flex-col items-center mt-8 z-50">
         <img
           src="/images/logo/Logo_Icon.png"
           alt="Strash Icon"
@@ -20,12 +20,12 @@ const RegisterView = () => {
         <p className="font-medium text-primary text-sm md:text-base text-center max-w-md mb-2">
           Bergabunglah bersama kami untuk dunia yang lebih bersih.
         </p>
-      </div>
+      </header>
 
       {/* Card */}
-      <form className="w-full max-w-xl bg-white rounded-2xl shadow-lg px-4 py-6 md:px-8 md:py-10 mb-6">
+      <form className="w-full max-w-md bg-white rounded-2xl shadow-lg px-4 py-6 md:px-8 md:py-10 mb-6">
         {/* Nama Lengkap */}
-        <div className="mb-5">
+        <section className="mb-5">
           <label htmlFor="name" className="block text-primary font-semibold mb-2 text-sm md:text-base">
             Nama Lengkap
           </label>
@@ -40,9 +40,9 @@ const RegisterView = () => {
               placeholder="Budi Santoso"
             />
           </div>
-        </div>
+        </section>
         {/* Email */}
-        <div className="mb-5">
+        <section className="mb-5">
           <label htmlFor="email" className="block text-primary font-semibold mb-2 text-sm md:text-base">
             Alamat Email
           </label>
@@ -57,9 +57,9 @@ const RegisterView = () => {
               placeholder="contoh@email.com"
             />
           </div>
-        </div>
+        </section>
         {/* Password */}
-        <div className="mb-5">
+        <section className="mb-5">
           <label htmlFor="password" className="block text-primary font-semibold mb-2 text-sm md:text-base">
             Kata Sandi
           </label>
@@ -68,7 +68,7 @@ const RegisterView = () => {
               <img src="/images/icons/Password.svg" alt="Password" className="h-5 w-5" />
             </span>
             <input
-              type={showPassword ? 'text' : 'password'}
+              type={showPassword ? "text" : "password"}
               id="password"
               className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition font-bold text-primary text-sm md:text-base placeholder:font-medium text-primary text-base"
               placeholder="***********"
@@ -80,15 +80,15 @@ const RegisterView = () => {
               tabIndex={-1}
             >
               <img
-                src={showPassword ? '/images/icons/Password-Open.svg' : '/images/icons/Password-Hide.svg'}
-                alt={showPassword ? 'Tutup Sandi' : 'Lihat Sandi'}
+                src={showPassword ? "/images/icons/Password-Open.svg" : "/images/icons/Password-Hide.svg"}
+                alt={showPassword ? "Tutup Sandi" : "Lihat Sandi"}
                 className="h-5 w-5"
               />
             </button>
           </div>
-        </div>
+        </section>
         {/* Konfirmasi Password */}
-        <div className="mb-8">
+        <section className="mb-8">
           <label htmlFor="confirm-password" className="block text-primary font-semibold mb-2 text-sm md:text-base">
             Konfirmasi Kata Sandi
           </label>
@@ -97,7 +97,7 @@ const RegisterView = () => {
               <img src="/images/icons/Password.svg" alt="Password" className="h-5 w-5" />
             </span>
             <input
-              type={showConfirmPassword ? 'text' : 'password'}
+              type={showConfirmPassword ? "text" : "password"}
               id="confirm-password"
               className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition font-bold text-primary text-sm md:text-base placeholder:font-medium text-primary text-base"
               placeholder="***********"
@@ -109,13 +109,13 @@ const RegisterView = () => {
               tabIndex={-1}
             >
               <img
-                src={showConfirmPassword ? '/images/icons/Password-Open.svg' : '/images/icons/Password-Hide.svg'}
-                alt={showConfirmPassword ? 'Tutup Sandi' : 'Lihat Sandi'}
+                src={showConfirmPassword ? "/images/icons/Password-Open.svg" : "/images/icons/Password-Hide.svg"}
+                alt={showConfirmPassword ? "Tutup Sandi" : "Lihat Sandi"}
                 className="h-5 w-5"
               />
             </button>
           </div>
-        </div>
+        </section>
         {/* Button Daftar */}
         <button
           type="submit"
@@ -125,49 +125,49 @@ const RegisterView = () => {
             <img src="/images/icons/Enter.svg" alt="Daftar" className="w-5 h-5" />
           </span>
           <span className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-semibold">
-            Daftar
+            Daftar 
           </span>
         </button>
         {/* Divider */}
-        <div className="flex items-center my-6">
+        <section className="flex items-center my-6">
           <div className="flex-1 h-px bg-gray-300" />
           <span className="mx-4 text-gray-500 font-medium text-sm md:text-base">Atau lanjutkan dengan</span>
           <div className="flex-1 h-px bg-gray-300" />
-        </div>
+        </section>
         {/* Social Buttons */}
-        <div className="flex flex-col gap-3 md:flex-row md:gap-4 mb-2">
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
+        <nav className="flex flex-col gap-3 md:flex-row md:gap-4 mb-2">
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
             <img src="/images/icons/Google.svg" alt="Google" className="h-4 w-4" />
           </button>
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
             <img src="/images/icons/Facebook.svg" alt="Facebook" className="h-4 w-4" />
           </button>
-          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={(e) => e.preventDefault()}>
+          <button className="flex-1 border-2 border-primary rounded-lg py-3 flex items-center justify-center hover:bg-primary/10 transition" onClick={e => e.preventDefault()}>
             <img src="/images/icons/iCloud.svg" alt="Apple" className="h-4 w-4" />
           </button>
-        </div>
+        </nav>
       </form>
       {/* Register Link */}
       <p className="mt-2 text-center text-primary font-medium text-sm md:text-base">
         Sudah punya akun? <Link to="/login" className="font-bold hover:font-extrabold">Masuk</Link>
       </p>
       {/* Fitur bawah */}
-      <div className="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-8 mt-8 text-primary text-xs md:text-sm font-medium">
-        <div className="flex items-center gap-2 justify-center">
+      <footer className="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-8 mt-8 text-primary text-xs md:text-sm font-medium">
+        <section className="flex items-center gap-2 justify-center">
           <img src="/images/icons/Shield.svg" alt="Login Aman" className="h-5 w-5" />
           Login Aman
-        </div>
-        <div className="flex items-center gap-2 justify-center">
+        </section>
+        <section className="flex items-center gap-2 justify-center">
           <img src="/images/icons/Lock.svg" alt="Privasi Terlindungi" className="h-5 w-5" />
           Privasi Terlindungi
-        </div>
-        <div className="flex items-center gap-2 justify-center">
+        </section>
+        <section className="flex items-center gap-2 justify-center">
           <img src="/images/icons/Headphone-CS.svg" alt="Dukungan 24/7" className="h-5 w-5" />
           Dukungan 24/7
-        </div>
-      </div>
-    </div>
+        </section>
+      </footer>
+    </section>
   );
 };
 
-export default RegisterView;
+export default RegisterView; 

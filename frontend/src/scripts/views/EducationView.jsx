@@ -7,10 +7,10 @@ const EducationView = () => {
   const eduRef = useRef(null);
 
   return (
-    <div className="bg-white min-h-screen pt-20 z-50 font-nunito">
+    <section className="bg-white min-h-screen pt-20 z-50 font-nunito">
       {/* Hero Section */}
-      <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-8 pt-8 md:pt-16 px-4 md:px-10 lg:px-16">
-        <div className="flex-1 flex flex-col gap-4 w-full md:gap-2">
+      <header className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-8 pt-8 px-8 md:pt-16 px-4 md:px-10 lg:px-16">
+        <section className="flex-1 flex flex-col gap-4 w-full md:gap-2">
           <span className="text-xs md:text-sm text-primary font-semibold tracking-widest mb-2">
             EDUKASI Strash
           </span>
@@ -45,18 +45,18 @@ const EducationView = () => {
               className="w-4 h-4"
             />
           </button>
-        </div>
-        <div className="hidden md:flex flex justify-center items-center">
+        </section>
+        <figure className="hidden md:flex flex justify-center items-center">
           <img
             src="/images/general/Splash-Screen-6.png"
             alt="Laptop"
             className="max-w-xs md:max-w-md lg:max-w-lg w-full"
           />
-        </div>
-      </div>
+        </figure>
+      </header>
 
       {/* Kategori Sampah */}
-      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-4 mt-12 mb-8 px-4 md:px-10 lg:px-16">
+      <nav className="w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-4 mt-12 mb-8 px-8 md:px-10 lg:px-16">
         {[
           {
             key: 'plastik',
@@ -115,10 +115,10 @@ const EducationView = () => {
             <span className="text-lg">{cat.label}</span>
           </button>
         ))}
-      </div>
+      </nav>
 
       {/* Section Dinamis Berdasarkan Kategori */}
-      <div ref={eduRef} className="w-full mx-auto px-4 md:px-10 lg:px-16 mb-12">
+      <section ref={eduRef} className="w-full mx-auto px-8 md:px-10 lg:px-16 mb-12">
         {selectedCategory === 'plastik' && (
           <>
             <h2 className="text-xl md:text-2xl font-bold text-primary mb-2">
@@ -129,13 +129,15 @@ const EducationView = () => {
               Pemilahan yang tepat membantu proses daur ulang.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
-                <img
-                  src="/images/general/Plastic-1.jpg"
-                  alt="Jenis Plastik"
-                  className="w-full h-56 md:h-64 object-cover"
-                />
-                <div className="flex-1 p-6 flex flex-col justify-center">
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+                <figure>
+                  <img
+                    src="/images/general/Plastic-1.jpg"
+                    alt="Jenis Plastik"
+                    className="w-full h-56 md:h-64 object-cover"
+                  />
+                </figure>
+                <section className="flex-1 p-6 flex flex-col justify-center">
                   <h3 className="font-bold text-primary text-lg mb-1">
                     Jenis-jenis Plastik
                   </h3>
@@ -145,9 +147,9 @@ const EducationView = () => {
                     (wadah makanan), dan PS (styrofoam). Setiap jenis memiliki
                     karakteristik dan proses daur ulang yang berbeda.
                   </p>
-                </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+                </section>
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Plastic-2.jpg"
                   alt="Cara Memilah Plastik"
@@ -165,8 +167,8 @@ const EducationView = () => {
                     berjalan lebih efektif.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Plastic-3.jpg"
                   alt="Dampak Plastik"
@@ -184,8 +186,8 @@ const EducationView = () => {
                     perubahan iklim.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Plastic-4.jpg"
                   alt="Tips Mengurangi Plastik"
@@ -203,7 +205,7 @@ const EducationView = () => {
                     efektif.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </>
         )}
@@ -218,7 +220,7 @@ const EducationView = () => {
               mengurangi penebangan pohon dan limbah di TPA.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Paper-1.jpg"
                   alt="Jenis Kertas"
@@ -235,8 +237,8 @@ const EducationView = () => {
                     berbeda dan dapat dimanfaatkan kembali menjadi produk baru.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Paper-2.jpg"
                   alt="Cara Memilah Kertas"
@@ -253,8 +255,8 @@ const EducationView = () => {
                     kualitas kertas.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Paper-3.jpg"
                   alt="Manfaat Daur Ulang Kertas"
@@ -271,8 +273,8 @@ const EducationView = () => {
                     air.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Paper-4.jpg"
                   alt="Tips Mengurangi Kertas"
@@ -290,7 +292,7 @@ const EducationView = () => {
                     kertas untuk menghemat penggunaan.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </>
         )}
@@ -305,7 +307,7 @@ const EducationView = () => {
               dan sumber daya alam.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Metal-1.jpg"
                   alt="Jenis Logam"
@@ -322,8 +324,8 @@ const EducationView = () => {
                     dan proses daur ulang yang berbeda.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Metal-2.jpg"
                   alt="Cara Memilah Logam"
@@ -340,8 +342,8 @@ const EducationView = () => {
                     berbahaya seperti baterai atau cat.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Metal-3.jpg"
                   alt="Nilai Ekonomi Logam"
@@ -358,8 +360,8 @@ const EducationView = () => {
                     14.000 kWh listrik.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Metal-4.jpg"
                   alt="Tips Mengurangi Logam"
@@ -376,7 +378,7 @@ const EducationView = () => {
                     mengurangi limbah logam di lingkungan.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </>
         )}
@@ -391,7 +393,7 @@ const EducationView = () => {
               mengurangi limbah.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Glass-1.jpg"
                   alt="Jenis Kaca"
@@ -408,8 +410,8 @@ const EducationView = () => {
                     kualitas yang sama.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Glass-2.jpg"
                   alt="Cara Memilah Kaca"
@@ -426,8 +428,8 @@ const EducationView = () => {
                     label. Hindari mencampur dengan keramik atau kristal.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Glass-3.jpg"
                   alt="Keamanan Penanganan Kaca"
@@ -444,8 +446,8 @@ const EducationView = () => {
                     dibuang untuk menghindari cedera.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Glass-4.jpg"
                   alt="Tips Mengurangi Pengunaan Kaca"
@@ -463,7 +465,7 @@ const EducationView = () => {
                     limbah dan menjaga keberlanjutan lingkungan.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </>
         )}
@@ -478,7 +480,7 @@ const EducationView = () => {
               nutrisi untuk tanah.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Organic-1.jpg"
                   alt="Jenis-jenis Sampah Organik"
@@ -495,8 +497,8 @@ const EducationView = () => {
                     kaya nutrisi.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Organic-2.jpg"
                   alt="Cara Memilah Sampah Organik"
@@ -513,8 +515,8 @@ const EducationView = () => {
                     kelembaban yang seimbang.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Organic-3.jpg"
                   alt="Dampak Sampah Organik"
@@ -530,8 +532,8 @@ const EducationView = () => {
                     kita dapat mengurangi limbah dan menghasilkan pupuk alami.
                   </p>
                 </div>
-              </div>
-              <div className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
+              </article>
+              <article className="bg-white rounded-xl shadow p-0 flex flex-col overflow-hidden">
                 <img
                   src="/images/general/Organic-4.jpg"
                   alt="Tips Mengelola Sampah Organik"
@@ -549,29 +551,26 @@ const EducationView = () => {
                     tidak terbuang sia-sia dan lingkungan tetap terjaga.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
           </>
         )}
-      </div>
+      </section>
 
       {/* Tips Pemilahan Sampah */}
-      <div className="w-full mx-auto px-4 md:px-10 lg:px-16 mb-12">
+      <section className="w-full mx-auto px-8 md:px-10 lg:px-16 mb-12">
         <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
           Tips Pemilahan Sampah
         </h2>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
-            <span
-              className="rounded-full p-4 mb-4 flex items-center justify-center"
-              style={{ background: '#2c6b3f' }}
-            >
+          <article className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
+            <figure className="rounded-full p-4 mb-4 flex items-center justify-center" style={{ background: '#2c6b3f' }}>
               <img
                 src="/images/icons/Sort.svg"
                 alt="Sort"
                 className="w-6 h-6"
               />
-            </span>
+            </figure>
             <h4 className="font-bold text-primary text-xl mb-1">
               Pilah dari Sumbernya
             </h4>
@@ -580,18 +579,15 @@ const EducationView = () => {
               dan pengolahan sampah berikutnya bisa berjalan lebih lancar dan
               efektif.
             </p>
-          </div>
-          <div className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
-            <span
-              className="rounded-full p-4 mb-4 flex items-center justify-center"
-              style={{ background: '#2c6b3f' }}
-            >
+          </article>
+          <article className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
+            <figure className="rounded-full p-4 mb-4 flex items-center justify-center" style={{ background: '#2c6b3f' }}>
               <img
                 src="/images/icons/Recycle-2.svg"
                 alt="Recycle"
                 className="w-6 h-6"
               />
-            </span>
+            </figure>
             <h4 className="font-bold text-primary text-xl mb-1">
               Bersihkan Sebelum Buang
             </h4>
@@ -600,18 +596,15 @@ const EducationView = () => {
               sebelum dibuang agar proses daur ulang menjadi lebih efektif dan
               hasilnya lebih berkualitas.
             </p>
-          </div>
-          <div className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
-            <span
-              className="rounded-full p-4 mb-4 flex items-center justify-center"
-              style={{ background: '#2c6b3f' }}
-            >
+          </article>
+          <article className="bg-white border border-primary rounded-lg p-6 flex flex-col items-start gap-2">
+            <figure className="rounded-full p-4 mb-4 flex items-center justify-center" style={{ background: '#2c6b3f' }}>
               <img
                 src="/images/icons/Leaf-2.svg"
                 alt="Leaf"
                 className="w-6 h-6"
               />
-            </span>
+            </figure>
             <h4 className="font-bold text-primary text-xl mb-1">
               Manfaatkan Kembali
             </h4>
@@ -620,10 +613,10 @@ const EducationView = () => {
               membuangnya agar limbah berkurang dan sumber daya yang ada dapat
               dimanfaatkan secara lebih optimal.
             </p>
-          </div>
+          </article>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 
