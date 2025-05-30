@@ -13,7 +13,7 @@ const Navbar = () => {
         <div class="flex flex-col gap-4 text-center">
           <a href="/" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/' ? 'font-extrabold' : ''}">Beranda</a>
           <a href="/history" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/riwayat' ? 'font-extrabold' : ''}">Riwayat</a>
-          <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Peringkat</a>
+          <a href="/ranking" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/ranking' ? 'font-extrabold' : ''}">Peringkat</a>
           <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Lokasi TPA</a>
           <a href="#" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2">Donasi</a>
           <a href="/login" class="text-primary text-lg font-semibold hover:font-extrabold transition py-2 ${location.pathname === '/login' ? 'font-extrabold' : ''}">Masuk</a>
@@ -65,7 +65,16 @@ const Navbar = () => {
             Riwayat
           </ViewTransitionLink>
         </li>
-        <li><a href="#" className="transition font-semibold hover:font-extrabold">Peringkat</a></li>
+        <li>
+          <ViewTransitionLink 
+            to="/ranking" 
+            className={`transition hover:font-extrabold ${
+              location.pathname === '/ranking' ? 'font-extrabold' : 'font-semibold'
+            }`}
+          >
+            Peringkat
+          </ViewTransitionLink>
+        </li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Lokasi TPA</a></li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Donasi</a></li>
         <li>

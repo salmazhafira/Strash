@@ -5,7 +5,7 @@ const footerLinks = [
   [
     { label: "Beranda", href: "/" },
     { label: "Riwayat", href: "/history" },
-    { label: "Peringkat", href: "/peringkat" },
+    { label: "Peringkat", href: "/ranking" },
     { label: "Lokasi TPA", href: "/lokasi-tpa" },
     { label: "Donasi", href: "/donasi" },
     { label: "Akun", href: "/akun" },
