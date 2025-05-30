@@ -5,6 +5,7 @@ import EducationView from '../views/EducationView.jsx';
 import AboutView from '../views/AboutView.jsx';
 import HistoryView from '../views/HistoryView.jsx';
 import RankingView from '../views/RankingView.jsx';
+import AccountView from '../views/AccountView.jsx';
 
 const routes = {
   '/': HomepageView,
@@ -14,6 +15,7 @@ const routes = {
   '/about': AboutView,
   '/history': HistoryView,
   '/ranking': RankingView,
+  '/account': AccountView,
 };
 
 export default routes;
