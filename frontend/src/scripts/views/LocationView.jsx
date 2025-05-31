@@ -33,11 +33,11 @@ const Location = () => {
   ];
 
   const [detailHover, setDetailHover] = useState(false);
-  const [ruteHover, setRuteHover] = useState(false);
   const [terdekatHover, setTerdekatHover] = useState(false);
   const [bukaSekarangHover, setBukaSekarangHover] = useState(false);
   const [hoverLeft, setHoverLeft] = useState(false);
   const [hoverRight, setHoverRight] = useState(false);
+  const [hoveredRuteButtonId, setHoveredRuteButtonId] = useState(null);
 
   return (
     <div className="bg-white min-h-screen pt-20 z-50 font-nunito">
@@ -178,13 +178,13 @@ const Location = () => {
                     Detail
                   </button>
                   <button
-                    className={`flex-1 flex items-center justify-center gap-2 border border-green-600 px-4 py-2 rounded-lg ${ruteHover ? "bg-[#2C6B3F] text-white" : "bg-white text-primary hover:bg-[#2C6B3F] hover:text-white"}`}
-                    onMouseEnter={() => setRuteHover(true)}
-                    onMouseLeave={() => setRuteHover(false)}
+                    className={`flex-1 flex items-center justify-center gap-2 border border-green-600 px-4 py-2 rounded-lg ${hoveredRuteButtonId === tpa.id ? "bg-[#2C6B3F] text-white" : "bg-white text-primary hover:bg-[#2C6B3F] hover:text-white"}`}
+                    onMouseEnter={() => setHoveredRuteButtonId(tpa.id)}
+                    onMouseLeave={() => setHoveredRuteButtonId(null)}
                   >
                     <img
                       src={
-                        ruteHover
+                        hoveredRuteButtonId === tpa.id
                           ? "/images/icons/Route-2.svg"
                           : "/images/icons/Route.svg"
                       }
