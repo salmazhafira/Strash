@@ -75,7 +75,16 @@ const Navbar = () => {
             Peringkat
           </ViewTransitionLink>
         </li>
-        <li><a href="#" className="transition font-semibold hover:font-extrabold">Lokasi TPA</a></li>
+        <li>
+          <ViewTransitionLink 
+            to="/location" 
+            className={`transition hover:font-extrabold ${
+              location.pathname === '/location' ? 'font-extrabold' : 'font-semibold'
+            }`}
+          >
+            Lokasi TPA
+          </ViewTransitionLink>
+        </li>
         <li><a href="#" className="transition font-semibold hover:font-extrabold">Donasi</a></li>
         <li>
           <ViewTransitionLink 

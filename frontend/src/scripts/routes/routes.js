@@ -6,6 +6,7 @@ import AboutView from '../views/AboutView.jsx';
 import HistoryView from '../views/HistoryView.jsx';
 import RankingView from '../views/RankingView.jsx';
 import AccountView from '../views/AccountView.jsx';
+import LocationView from '../views/LocationView.jsx';
 
 const routes = {
   '/': HomepageView,
@@ -16,6 +17,7 @@ const routes = {
   '/history': HistoryView,
   '/ranking': RankingView,
   '/account': AccountView,
+  '/location': LocationView,
 };
 
 export default routes;
