@@ -166,8 +166,8 @@ const HomepageView = () => {
         <p className="text-[#2C6B3F] max-w-xxl mb-8 text-lg font-light text-center">
           {hero.subtitle}
         </p>
-        <a
-          href="#"
+        <ViewTransitionLink
+          to="/scan"
           className="bg-primary text-white py-4 px-6 rounded-full font-bold shadow hover:bg-green-800 transition mb-10 flex items-center gap-3 mx-auto text-lg"
         >
           {hero.cta}
@@ -176,7 +176,7 @@ const HomepageView = () => {
             alt="Arrow"
             className="h-4 w-4"
           />
-        </a>
+        </ViewTransitionLink>
         <img
           src={hero.imagePhone}
           alt="Strash App Screenshot"
@@ -303,7 +303,14 @@ const HomepageView = () => {
               <p className="font-medium text-primary text-base mb-6 max-w-96">
                 {feature.desc}
               </p>
-              {feature.title === "Edukasi Pemilahan Sampah" ? (
+              {feature.title === "Klasifikasi Sampah Otomatis" ? (
+                <ViewTransitionLink
+                  to="/scan"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </ViewTransitionLink>
+              ) : feature.title === "Edukasi Pemilahan Sampah" ? (
                 <ViewTransitionLink
                   to="/education"
                   className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
@@ -317,14 +324,28 @@ const HomepageView = () => {
                 >
                   {feature.cta}
                 </ViewTransitionLink>
-              ) : (
-                <a
-                  href="#"
+              ) : feature.title === "Lokasi TPA Terdekat" ? (
+                <ViewTransitionLink
+                  to="/location"
                   className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
                 >
                   {feature.cta}
-                </a>
-              )}
+                </ViewTransitionLink>
+              ) : feature.title === "Peringkat EcoPoints" ? (
+                <ViewTransitionLink
+                  to="/ranking"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </ViewTransitionLink>
+              ) : feature.title === "Donasi untuk Lingkungan" ? (
+                <ViewTransitionLink
+                  to="/donation"
+                  className="border border-primary text-primary px-6 py-2 rounded-md font-semibold text-base hover:bg-primary hover:text-white transition mt-auto block text-center"
+                >
+                  {feature.cta}
+                </ViewTransitionLink>
+              ) : null}
             </div>
           ))}
         </div>
@@ -410,7 +431,10 @@ const HomepageView = () => {
               {team.title}
             </h2>
             <p className="text-primary text-lg mb-8 max-w-xl">{team.desc}</p>
-            <button className="mt-4 w-max bg-primary text-white text-lg py-2 pl-6 pr-[.5rem] rounded-full font-bold shadow hover:bg-green-800 transition flex items-center gap-2">
+            <a
+              href="mailto:strash@gmail.com"
+              className="mt-4 w-max bg-primary text-white text-lg py-2 pl-6 pr-[.5rem] rounded-full font-bold shadow hover:bg-green-800 transition flex items-center gap-2"
+            >
               {team.cta}
               <span className="flex items-center justify-center h-12 w-12 rounded-full bg-white ml-2">
                 <img
@@ -419,7 +443,7 @@ const HomepageView = () => {
                   className="h-7 w-7"
                 />
               </span>
-            </button>
+            </a>
           </div>
           <div className="hidden md:block">
             <img

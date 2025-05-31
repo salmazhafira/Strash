@@ -58,11 +58,18 @@ const AboutView = () => {
             menciptakan solusi pengelolaan sampah yang inovatif dan
             berkelanjutan.
           </p>
-          <ViewTransitionLink
-            to="#"
+          <a
+            href="#mission"
             className="w-max bg-white border border-primary text-primary font-semibold rounded-lg px-5 py-3 flex items-center gap-3 hover:bg-primary hover:text-white transition"
             onMouseEnter={() => setArrowHover(true)}
             onMouseLeave={() => setArrowHover(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              const missionContainer = document.getElementById('mission-container');
+              if (missionContainer) {
+                missionContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }}
           >
             Bergabung Bersama Kami
             <img
@@ -74,7 +81,7 @@ const AboutView = () => {
               alt="Arrow"
               className="w-3 h-3"
             />
-          </ViewTransitionLink>
+          </a>
         </div>
         <div className="hidden md:flex flex justify-center items-center">
           <img
@@ -445,8 +452,8 @@ const AboutView = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="max-w-5xl mx-auto px-4 md:px-10 lg:px-14 mt-20 mb-20">
-        <div className="bg-white border border-primary rounded-2xl px-16 py-10 flex flex-col items-center text-center shadow-sm">
+      <section id="mission" className="max-w-5xl mx-auto px-4 md:px-10 lg:px-14 mt-20 mb-20">
+        <div id="mission-container" className="bg-white border border-primary rounded-2xl px-16 py-10 flex flex-col items-center text-center shadow-sm">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-6">
             Bergabunglah dalam Misi Kami
           </h2>
@@ -460,13 +467,13 @@ const AboutView = () => {
             dampak positif, dan berkolaborasi untuk masa depan yang lebih hijau
             dan ramah lingkungan.
           </p>
-          <ViewTransitionLink
-            to="#"
+          <a
+            href="mailto:strash@gmail.com"
             className="w-max bg-white border border-primary text-primary font-semibold rounded-lg px-5 py-3 flex items-center gap-3 hover:bg-primary hover:text-white transition"
             onMouseEnter={() => setArrowHover(true)}
             onMouseLeave={() => setArrowHover(false)}
           >
-            Bergabung Bersama Kami
+            Hubungi Kami
             <img
               src={
                 arrowHover
@@ -476,7 +483,7 @@ const AboutView = () => {
               alt="Arrow"
               className="w-3 h-3"
             />
-          </ViewTransitionLink>
+          </a>
         </div>
       </section>
     </section>

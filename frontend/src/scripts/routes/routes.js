@@ -8,6 +8,7 @@ import RankingView from '../views/RankingView.jsx';
 import AccountView from '../views/AccountView.jsx';
 import LocationView from '../views/LocationView.jsx';
 import DonationView from '../views/DonationView.jsx';
+import ScanView from '../views/ScanView.jsx';
 
 const routes = {
   '/': HomepageView,
@@ -20,6 +21,7 @@ const routes = {
   '/account': AccountView,
   '/location': LocationView,
   '/donation': DonationView,
+  '/scan': ScanView,
 };
 
 export default routes;

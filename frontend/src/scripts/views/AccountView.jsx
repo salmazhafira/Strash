@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer.jsx";
-import ViewTransitionLink from '../components/ViewTransitionLink.jsx';
+import ViewTransitionLink from "../components/ViewTransitionLink.jsx";
 
 const summary = [
   { icon: "/images/icons/Star-2.svg", label: "Total Poin", value: 155 },
@@ -31,31 +31,37 @@ const sidebarMenu = [
     icon: "/images/icons/Profile.svg",
     label: "Informasi Pribadi",
     desc: "Kelola data pribadi anda",
+    id: "profile",
   },
   {
     icon: "/images/icons/Password.svg",
     label: "Ubah Password",
     desc: "Perbarui password akun anda",
+    id: "password",
   },
   {
     icon: "/images/icons/Notification.svg",
     label: "Pengaturan Notifikasi",
     desc: "Kelola preferensi notifikasi",
+    id: "notifications",
   },
   {
     icon: "/images/icons/Privacy.svg",
     label: "Preferensi Privasi",
     desc: "Kelola pengaturan privasi",
+    id: "privacy",
   },
   {
     icon: "/images/icons/Language.svg",
     label: "Bahasa Aplikasi",
     desc: "Ubah bahasa aplikasi",
+    id: "language",
   },
   {
     icon: "/images/icons/Help.svg",
     label: "Bantuan & Dukungan",
     desc: "Pusat bantuan dan dukungan",
+    id: "help",
   },
 ];
 
@@ -454,6 +460,25 @@ function ContentSection({ activeTab }) {
 const AkunView = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [hoverIdx, setHoverIdx] = useState(null);
+
+  // Handle hash URL changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      const tabIndex = sidebarMenu.findIndex((item) => item.id === hash);
+      if (tabIndex !== -1) {
+        setActiveTab(tabIndex);
+      }
+    };
+
+    // Check hash on initial load
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <section className="bg-white min-h-screen pt-20 z-50 font-nunito">
       <div className="w-full pt-8 px-8 md:pt-16 md:px-10 lg:px-16">
