@@ -1,73 +1,107 @@
-# Waste Classification App
+# Strash - Aplikasi Klasifikasi Sampah Pintar
 
-Aplikasi klasifikasi sampah berbasis web yang menggunakan teknologi machine learning untuk mengidentifikasi jenis sampah dari gambar. Aplikasi ini dibangun dengan React.js untuk frontend dan Hapi.js untuk backend.
+Strash adalah aplikasi web progresif (PWA) yang menggunakan teknologi machine learning untuk mengidentifikasi dan mengklasifikasikan sampah secara otomatis. Aplikasi ini dibangun dengan React.js untuk frontend dan Hapi.js untuk backend, terintegrasi dengan Firebase dan Railway untuk penyimpanan data dan deployment.
 
-## Fitur Utama
+## 🚀 Fitur Utama
 
-- **Klasifikasi Sampah**
-  - Upload gambar atau gunakan kamera
-  - Klasifikasi sampah menggunakan model TensorFlow.js
-  - Hasil klasifikasi dengan persentase kepercayaan
-  - Rekomendasi penanganan sampah
+### 📸 Klasifikasi Sampah
+- Upload gambar atau gunakan kamera real-time
+- Klasifikasi sampah menggunakan TensorFlow.js dan MobileNet
+- Hasil klasifikasi dengan persentase akurat
+- Rekomendasi penanganan sampah berdasarkan jenis
+- Integrasi machine learning model yang dioptimalkan
 
-- **Riwayat Klasifikasi**
-  - Menyimpan hasil klasifikasi
-  - Filter berdasarkan tanggal
-  - Detail hasil klasifikasi
+### 📊 Riwayat
+- Menyimpan hasil klasifikasi di Firebase
+- Filter berdasarkan jenis sampah
+- Detail hasil klasifikasi dengan visualisasi
+- Statistik pengguna
 
-- **Leaderboard**
-  - Peringkat pengguna berdasarkan jumlah klasifikasi
-  - Tampilan responsif
-  - Update real-time
+### 🏆 Leaderboard & Gamifikasi
+- Peringkat pengguna berdasarkan jumlah klasifikasi
+- Sistem poin
+- Update real-time menggunakan Firebase
 
-- **Edukasi**
-  - Berita terkini tentang pengelolaan sampah
-  - Sumber berita dari News API
-  - Desain card modern dengan animasi
-  - Responsif untuk mobile dan desktop
+### 📚 Edukasi & Informasi
+- Artikel edukasi tentang jenis sampah
+- Tips pengelolaan sampah
+- Desain card modern dengan animasi
 
-- **Autentikasi**
-  - Login dan registrasi pengguna
-  - Proteksi endpoint dengan Firebase
-  - Manajemen sesi pengguna
+### 🔐 Autentikasi & Keamanan
+- Login dan registrasi dengan Firebase Auth
+- Proteksi endpoint dengan JWT
+- Manajemen sesi pengguna
+- Secure data storage
 
-## Teknologi yang Digunakan
+## 🛠️ Teknologi yang Digunakan
 
 ### Frontend
-- React.js
-- TensorFlow.js untuk klasifikasi gambar
+- React.js dengan Hooks dan Context API
+- TensorFlow.js & MobileNet untuk ML
 - Tailwind CSS untuk styling
-- News API untuk konten edukasi
-- Firebase Authentication
+- PWA dengan Service Worker
+- SweetAlert2 untuk UI/UX
+- React-Toastify untuk notifikasi
+- Axios untuk HTTP requests
 
 ### Backend
-- Hapi.js
+- Hapi.js framework
 - Firebase Firestore
 - Firebase Admin SDK
+- JWT untuk autentikasi
+- Railway untuk deployment
+- Compression untuk optimasi
 
+### Machine Learning
+- TensorFlow.js
+- MobileNet model
+- Custom model training
+- Model optimization
+- Real-time inference
 
+## 📦 Instalasi
 
+### Prasyarat
+- Node.js (v14 atau lebih baru)
+- npm atau yarn
+- Firebase account
+- Railway account
 
+### Frontend
+```bash
+cd frontend
+npm install
+npm run serve
+```
 
-## Penggunaan
+## 🔧 Konfigurasi
 
-1. Buka aplikasi di browser (default: http://localhost:3000)
+### Frontend (.env)
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_API_URL=your_railway_api_url
+```
+
+## 📱 Penggunaan
+
+1. Buka aplikasi di browser (default: http://127.0.0.1:8080)
 2. Buat akun atau login
-3. Pilih menu "Klasifikasi" untuk memulai klasifikasi sampah
+3. Pilih menu "Scan" untuk memulai
 4. Upload gambar atau gunakan kamera
 5. Lihat hasil klasifikasi dan rekomendasi
-6. Cek riwayat klasifikasi di menu "Riwayat"
-7. Lihat peringkat di menu "Leaderboard"
-8. Baca artikel edukasi di menu "Edukasi"
+6. Cek riwayat di menu "Riwayat"
+7. Lihat peringkat di "Leaderboard"
+8. Baca artikel di menu "Edukasi"
 
-## Kontribusi
+## 🤝 Kontribusi
 
 1. Fork repository
-2. Buat branch fitur baru (`git checkout -b fitur-baru`)
-3. Commit perubahan (`git commit -m 'Menambahkan fitur baru'`)
-4. Push ke branch (`git push origin fitur-baru`)
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
-
-
-
-
