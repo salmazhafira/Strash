@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+}
+
+/* View Transitions API styles */
+@keyframes fade-in {
+  from { 
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to { 
+    opacity: 0;
+  }
+}
+
+/* Page transitions */
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) 50ms both fade-in;
+}
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add transition to all interactive elements */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improve transition performance */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,7 +1,7 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{html,js,jsx,ts,tsx}',
-    './src/scripts/**/*.{js,jsx,ts,tsx}',
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -11,7 +11,10 @@ module.exports = {
       gridTemplateColumns: {
         20: 'repeat(20, minmax(0, 1fr))',
       },
+      fontFamily: {
+        nunito: ['Nunito', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],
-};
+}

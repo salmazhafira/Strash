@@ -1,0 +1,97 @@
+{
+  "short_name": "Strash",
+  "name": "Strash - Aplikasi Klasifikasi Sampah Pintar",
+  "description": "Strash adalah aplikasi pintar yang menggunakan teknologi Machine Learning untuk membantu Anda mengklasifikasi sampah dengan mudah dan akurat. Dukung gerakan ramah lingkungan dengan pemilahan sampah yang tepat.",
+  "icons": [
+    {
+      "src": "images/logo/Logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo/Logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/general/Screenshoot-Desktop-1.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide",
+      "label": "Halaman Utama Strash"
+    },
+    {
+      "src": "images/general/Screenshoot-Desktop-2.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide",
+      "label": "Fitur Klasifikasi Sampah"
+    },
+    {
+      "src": "images/general/Screenshoot-Desktop-3.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide",
+      "label": "Riwayat Klasifikasi"
+    },
+    {
+      "src": "images/general/Screenshoot-Phone-1.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "form_factor": "narrow",
+      "label": "Tampilan Mobile - Halaman Utama"
+    },
+    {
+      "src": "images/general/Screenshoot-Phone-2.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "form_factor": "narrow",
+      "label": "Tampilan Mobile - Klasifikasi"
+    },
+    {
+      "src": "images/general/Screenshoot-Phone-3.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "form_factor": "narrow",
+      "label": "Tampilan Mobile - Riwayat"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2C6B3F",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "id",
+  "categories": ["utilities", "productivity", "education", "lifestyle"],
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Klasifikasi Sampah",
+      "short_name": "Klasifikasi",
+      "description": "Mulai klasifikasi sampah baru dengan kamera",
+      "url": "/classify",
+      "icons": [{ "src": "images/logo/Logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Riwayat Klasifikasi",
+      "short_name": "Riwayat",
+      "description": "Lihat riwayat klasifikasi sampah Anda",
+      "url": "/history",
+      "icons": [{ "src": "images/logo/Logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Edukasi Sampah",
+      "short_name": "Edukasi",
+      "description": "Pelajari lebih lanjut tentang pengelolaan sampah",
+      "url": "/education",
+      "icons": [{ "src": "images/logo/Logo192.png", "sizes": "192x192" }]
+    }
+  ]
+} 
